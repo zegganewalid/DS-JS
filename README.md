@@ -3,10 +3,11 @@ DS Java Script avancée
 
 Cette application permet de rechercher et filtrer des produits via une interface simple, utilisant JavaScript et une architecture MVC (Modèle-Vue-Contrôleur).
 
-Modèle (model.js) : Contient les données des produits (nom, prix, disponibilité, catégorie).
-Vue (view.js) : Gère l'affichage des produits dans le tableau HTML.
-Contrôleur (controller.js) : Gère la logique métier, filtre les produits et capte les interactions utilisateur.
-App (app.js) : Point d'entrée qui initialise l'application et le contrôleur.
+-Modèle (model.js) : Contient les données des produits (nom, prix, disponibilité, catégorie).
+-Vue (view.js) : Gère l'affichage des produits dans le tableau HTML.
+-Contrôleur (controller.js) : Gère la logique métier, filtre les produits et capte les interactions utilisateur.
+-App (app.js) : Point d'entrée qui initialise l'application et le contrôleur.
+
 L'utilisateur peut rechercher des produits en temps réel et filtrer ceux qui sont en stock.
 
 <br>
