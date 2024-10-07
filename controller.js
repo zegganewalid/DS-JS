@@ -9,7 +9,7 @@ export const controller = {
         searchBar.addEventListener('input', this.filterProducts);
         inStockCheckbox.addEventListener('change', this.filterProducts);
 
-        this.filterProducts(); // Initial display of products
+        this.filterProducts();
     },
 
     filterProducts() {

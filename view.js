@@ -1,12 +1,10 @@
 export const view = {
     renderProducts(filteredProducts) {
         const productList = document.getElementById('product-list');
-        productList.innerHTML = ''; // Clear current products
+        productList.innerHTML = ''; 
 
-        // Unique categories extraction
         const categories = [...new Set(filteredProducts.map(product => product.category))];
 
-        // Render each category and its products
         categories.forEach(category => {
             const categoryRow = document.createElement('tr');
             const categoryCell = document.createElement('td');
@@ -16,7 +14,6 @@ export const view = {
             categoryRow.appendChild(categoryCell);
             productList.appendChild(categoryRow);
 
-            // Render products for each category
             filteredProducts
                 .filter(product => product.category === category)
                 .forEach(product => {
