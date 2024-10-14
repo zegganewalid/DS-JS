@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparer les Prêts</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Comparer les Prêts</h1>
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Calculateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="comparaison.html">Comparer les Prêts</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="form-group">
+      <label for="inputMontantComparaison">Montant</label>
+      <input class="form-control" type="number" id="inputMontantComparaison" value="100000" min="1000" max="1000000" step="1000">
+    </div>
+    <div class="form-group">
+      <label for="inputAnneeComparaison">Année</label>
+      <input class="form-control" type="number" id="inputAnneeComparaison" value="5" min="1" max="25" step="1">
+    </div>
+    <div class="form-group">
+      <label for="inputTauxComparaison">Taux (%)</label>
+      <input class="form-control" type="number" id="inputTauxComparaison" value="5" min="0.1" max="10" step="0.1">
+    </div>
+    
+    <button id="ajouterComparaison" class="btn btn-primary">Ajouter Prêt</button>
+    <button id="supprimerComparaison" class="btn btn-danger">Supprimer Tous</button> <!-- Nouveau bouton -->
+    
+    <h3>Résultats de la Comparaison</h3>
+    <table id="tableComparaison" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Montant</th>
+          <th>Année</th>
+          <th>Taux (%)</th>
+          <th>Mensualité</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <script type="module" src="comparaison.js"></script>
+</body>
+</html>

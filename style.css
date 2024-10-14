@@ -1,0 +1,73 @@
+/* Dégradé de fond animé */
+body {
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  /* Animation pour le fond en dégradé */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Apparition des éléments du formulaire */
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Transition douce lors du survol des inputs */
+  input, .form-control {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:hover, .form-control:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Transition douce lors du survol des lignes du tableau */
+  .table-striped tr:hover {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Danger - Intérêts > Capital Amorti */
+  .danger {
+    background-color: #ffcccc;
+    color: red;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Total row styling */
+  tfoot td {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #myPieChart {
+    width: 300px; /* Largeur du graphique */
+    height: 300px; /* Hauteur du graphique */
+    max-width: 500px; /* Largeur maximale */
+    max-height: 500px; /* Hauteur maximale */
+    margin: 0 auto; /* Centrer le graphique */
+  }
+  

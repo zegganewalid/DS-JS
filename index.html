@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur de mensualité</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculateur de mensualité</h1>
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Calculateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comparaison.html">Comparer les Prêts</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="form-group">
+      <label for="inputMontant">Montant</label>
+      <input class="form-control" type="number" id="inputMontant" value="1000" min="1000" max="1000000" step="1000">
+    </div>
+    <div class="form-group">
+      <label for="inputAnnee">Année</label>
+      <input class="form-control" type="number" id="inputAnnee" value="1" min="1" max="50" step="1">
+    </div>
+    <div class="form-group">
+      <label for="inputTaux">Taux</label>
+      <input class="form-control" type="number" id="inputTaux" value="2" min="0.1" max="10" step="0.1">
+    </div>
+    
+    <div class="form-group">
+      <label for="selectMesures">Choisir les mesures à afficher</label>
+      <select class="form-control" id="selectMesures">
+        <option value="capitalAmorti">Capital Amorti</option>
+        <option value="interets">Intérêts</option>
+        <option value="both">Les deux</option>
+      </select>
+    </div>
+
+    <table id="inputMensualite" class="table table-striped"></table>
+
+    <!-- Conteneur pour le graphique -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <!-- Conteneur pour le graphique circulaire -->
+    <canvas id="myPieChart" width="180" height="180"></canvas>
+  </div>
+  <script type="module" src="calculs.js"></script>
+  <script type="module" src="ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
